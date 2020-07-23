@@ -1,0 +1,85 @@
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-list__item {
+  font-family: 'OpenSans Bold', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+
+  a {
+    color: @basic-black;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.search-form__input {
+  border: none;
+  font-family: 'OpenSans Bold', Arial, sans-serif;
+
+  &::-webkit-input-placeholder {
+    color: @basic-black;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &:-ms-input-placeholder {
+    color: @basic-black;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &::-moz-placeholder {
+    color: @basic-black;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &:-moz-placeholder {
+    color: @basic-black;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    opacity: 0.6;
+  }
+
+  &:hover::-ms-input-placeholder {
+    opacity: 0.6;
+  }
+
+  &:hover::-moz-placeholder {
+    opacity: 0.6;
+  }
+
+  &:hover:-moz-placeholder {
+    opacity: 0.6;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &:focus::-ms-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &:focus::-moz-placeholder {
+    opacity: 0.3;
+  }
+
+  &:focus:-moz-placeholder {
+    opacity: 0.3;
+  }
+}
