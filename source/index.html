@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Милые штуки ручной  работы для дома | MISHKA </title>
+  <meta charset="UTF-8">
+  <title>Милые штуки ручной работы для дома | MISHKA</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -43,14 +44,15 @@
   <main class="page-main">
     <div class="page-main__wrapper">
       <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
+
       <section class="features">
         <h2 class="visually-hidden">Категории товаров</h2>
-        <div class="features__item">
+        <div class="features__item features__item--left">
           <h3 class="features__title">
             <a class="features__link">Предметы интерьера</a>
           </h3>
         </div>
-        <div class="features__item">
+        <div class="features__item features__item--right">
           <h3 class="features__title">
             <a class="features__link">Детские игрушки</a>
           </h3>
@@ -140,7 +142,9 @@
         <table class="contacts__data">
           <tr>
             <td>e-mail:</td>
-            <td>info@mimimishkashop.ru</td>
+            <td>
+              <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </td>
           </tr>
           <tr>
             <td>адрес:</td>
@@ -189,13 +193,13 @@
         <h3 class="popup-content__title">Добавить в корзину</h3>
         <span class="popup-content__text">Выберите размер:</span>
         <form class="size-form popup-content__form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="size-form__input" type="radio" name="size" id="size-s" value="S">
+          <input class="size-form__input" type="radio" name="size" id="size-s" value="S" checked>
           <label class="size-form__label" for="size-s">S</label>
           <input class="size-form__input" type="radio" name="size" id="size-m" value="M">
           <label class="size-form__label" for="size-m">M</label>
           <input class="size-form__input" type="radio" name="size" id="size-l" value="L">
           <label class="size-form__label" for="size-l">L</label>
-          <button class="size-form__button" type="submit">Добавить</button>
+          <button class="size-form__button button" type="submit">Добавить</button>
         </form>
       </div>
     </div>
