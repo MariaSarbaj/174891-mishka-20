@@ -2,4 +2,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-row-gap: 30px;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-row-gap: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 52px;
+  }
 }

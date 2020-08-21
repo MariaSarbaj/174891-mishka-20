@@ -1,8 +1,24 @@
+.slider {
+  position: relative;
+}
+
 .slider__toggle {
   width: 130px;
   height: 52px;
   border: 1px solid @shadow-grey;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.slider__toggle--prev {
+  @media (min-width: @tablet-width) {
+    right: 125px;
+  }
 }
 
 .slider__toggle--next {

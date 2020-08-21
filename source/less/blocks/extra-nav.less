@@ -1,0 +1,22 @@
+.extra-nav {
+  margin: 0;
+  padding: 0;
+  display: none;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 113px;
+    left: 0;
+    display: flex;
+  }
+}
+
+.extra-nav__item {
+  a {
+    font-weight: 700;
+    line-height: 24px;
+    color: @basic-black;
+    text-decoration: none;
+  }
+}
