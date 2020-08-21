@@ -1,7 +1,26 @@
+.bestseller-order {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    max-width: 292px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+  }
+}
+
 .bestseller-order__price {
+  margin-bottom: 24px;
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: @basic-black-light;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }

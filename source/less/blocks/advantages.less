@@ -1,6 +1,19 @@
 .advantages {
   padding-top: 31px;
   padding-bottom: 29px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 175px;
+  }
+}
+
+.advantages__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .advantages__list {
@@ -22,4 +35,9 @@
   font-size: 17px;
   line-height: 20px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

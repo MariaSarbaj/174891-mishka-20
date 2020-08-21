@@ -2,4 +2,28 @@
   padding-top: 25px;
   padding-bottom: 23px;
   background-color: @special-grey-footer;
+  text-align: center;
+}
+
+.page-footer__wrapper {
+  margin: 0 auto;
+  max-width: 1050px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+
+}
+
+.page-footer__logo {
+
+  @media(max-width: @mobile-width-only) {
+    display: none;
+  }
 }

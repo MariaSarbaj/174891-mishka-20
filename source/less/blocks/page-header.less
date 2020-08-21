@@ -1,3 +1,44 @@
 .page-header {
-  box-shadow: 0 1px 0 @shadow-grey, inset 0 1px 0 @shadow-grey;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid fade(@basic-black, 10%);
+  }
 }
+
+.page-header__wrapper {
+  margin: 0 auto;
+  max-width: 1050px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.page-header__logo {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  box-shadow: 0 1px 0 @shadow-grey, inset 0 1px 0 @shadow-grey;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    max-width: 150px;
+    box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+

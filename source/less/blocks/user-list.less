@@ -2,9 +2,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .user-list__item {
+  padding: 28px 0;
+  padding-left: 76px;
+  box-shadow: 0 1px 0 #ECECEC, inset 0 1px 0 #ECECEC;
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -21,5 +28,10 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+    padding-left: 0;
   }
 }

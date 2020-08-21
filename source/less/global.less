@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: @mobile-width;
   font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 30px;
   color: @basic-black-light;
@@ -23,12 +25,24 @@ body {
   font-size: 25px;
   line-height: 30px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37.5px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .button {
   width: 260px;
   padding: 16px 0;
   border: 2px solid @basic-black-light;
+  background-color: @basic-white;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -50,4 +64,15 @@ body {
     background: linear-gradient(0deg, @basic-black-light, @basic-black-light);
     color: @basic-white-fade;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 292px;
+  }
 }
+
+/* Temp */
+
+.popup-order {
+  display: none;
+}
+
