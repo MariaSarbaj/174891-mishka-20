@@ -9,15 +9,21 @@
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    width: 90px;
     position: absolute;
     bottom: 0;
     right: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 3px;
   }
 }
 
 .slider__toggle--prev {
   @media (min-width: @tablet-width) {
-    right: 125px;
+    right: 88px;
   }
 }
 

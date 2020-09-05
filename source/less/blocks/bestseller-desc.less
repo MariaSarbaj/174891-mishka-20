@@ -21,14 +21,16 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 40px;
-    right: 0;
+    top: 45px;
+    right: 28px;
     line-height: 17px;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
-    left: -970px;
+    right: auto;
+    left: 46px;
+    top: 122px;
   }
 
   br {
@@ -40,12 +42,19 @@
 
 .bestseller-desc__text {
   margin: 0;
+  margin-top: 10px;
+  margin-bottom: 21px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 38px;
     font-size: 17px;
     line-height: 30px;
     width: 292px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 48px;
   }
 }
 
@@ -55,10 +64,20 @@
   border-spacing: 0;
 
   td {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-right: 25px;
+    padding-right: 27px;
+    height: 40px;
+    box-sizing: border-box;
     border-bottom: 1px solid @shadow-grey;
+    vertical-align: middle;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 0;
+      height: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 42px;
+    }
   }
 
   @media (min-width: @tablet-width) {

@@ -12,21 +12,69 @@
   }
 }
 
+.card__img {
+  width: 260px;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 334px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 316px;
+    }
+  }
+}
+
 .card__desc {
   margin-top: -10px;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-left: 28px;
   border: 1px solid @shadow-grey;
 
+  &--long {
+    padding-top: 22px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 26px;
+    }
+
+    .card__order {
+      @media (min-width: @desktop-width) {
+        margin-top: 6px;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-top: 0;
+    padding-left: 30px;
     width: 50%;
+    min-height: 334px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    width: 288px;
-    min-height: 238px;
+    margin-top: -10px;
+    padding-left: 28px;
+    width: 316px;
+    min-height: 199px;
   }
 
   &--wrapper {
@@ -45,6 +93,10 @@
   color: @basic-black;
   text-decoration: none;
 
+  &--long {
+    margin-top: -3px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
@@ -60,11 +112,17 @@
 }
 
 .card__order {
-  margin-top: 22px;
+  margin-top: 18px;
   margin-right: 28px;
   padding-top: 22px;
-  padding-bottom: 26px;
+  padding-bottom: 22px;
   border-top: 1px solid @shadow-grey;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 260px;
@@ -79,5 +137,33 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
+  }
+}
+
+.card__cart {
+  margin-top: -2px;
+
+  &--icon {
+    margin-right: -1px;
+    fill: @basic-black;
+    opacity: 0.2;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 4px;
+    }
+  }
+
+  &:hover .user-list__cart--icon {
+    fill: @basic-mint-light;
+    opacity: 1;
+  }
+
+  &:active .user-list__cart--icon {
+    fill: @basic-mint-light;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -4px;
   }
 }

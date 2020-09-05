@@ -12,8 +12,9 @@
 
 .features__item {
   padding-left: 30px;
-  padding-top: 24px;
-  padding-bottom: 31px;
+  padding-top: 26px;
+  padding-bottom: 29px;
+  position: relative;
 
   &--left {
     background-color: @basic-mint-light;
@@ -30,11 +31,14 @@
 
   @media (min-width: @tablet-width) {
     width: 50%;
+    padding-left: 35px;
   }
 }
 
 .features__title {
   margin: 0;
+  max-width: 138px;
+  line-height: 22px;
 }
 
 .features__link {
@@ -48,5 +52,26 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.features__icon {
+  position: absolute;
+  fill: @special-mint-dark;
+
+  &--left {
+    width: 40.219px;
+    height: 62.411px;
+    top: 50%;
+    right: 36px;
+    transform: translateY(-48%);
+  }
+
+  &--right {
+    width: 60px;
+    height: 59.62px;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
   }
 }
