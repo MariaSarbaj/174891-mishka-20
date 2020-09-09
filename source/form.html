@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
   <head class="page">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вязание на заказ | MISHKA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body class="page__body">
     <svg style="display: none">
@@ -121,10 +123,10 @@
     </svg>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo logo">
+        <a class="page-header__logo logo" href="index.html">
           <picture>
-            <source media="(min-width: 1050px)" srcset="img/icons/logo-desktop.svg">
-            <source media="(min-width: 718px)" srcset="img/icons/logo-tablet.svg">
+            <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
             <img src="img/icons/logo-mobile.svg" alt="Мишка">
           </picture>
         </a>
@@ -146,11 +148,7 @@
                 <svg class="search-form__icon" width="18px" height="18px">
                   <use xlink:href="#icon-search"></use>
                 </svg>
-                <form class="search-form__form" action="https://echo.htmlacademy.ru" method="get">
-                  <label class="visually-hidden" for="search-form__input">Поиск по сайту</label>
-                  <input class="search-form__input" type="search" name="search-form__input" id="search-form__input" placeholder="Поиск по сайту">
-                  <button class="visually-hidden" type="submit">Найти</button>
-                </form>
+                <span class="search-form__desc">Поиск по сайту</span>
               </a>
             </li>
             <li class="user-list__item">
@@ -185,6 +183,7 @@
             <p class="order-form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
             <section class="order-form__type">
+              <h2 class="visually-hidden">Вид товара</h2>
               <span class="order-form__title">ТИП</span>
               <div class="order-form__wrapper order-form__wrapper--type">
                 <label class="order-form__label order-form__label--type" for="accessory">
@@ -203,6 +202,7 @@
           </div>
 
           <section class="order-form__color">
+            <h2 class="visually-hidden">Цветовая гамма</h2>
             <div class="order-form__container">
               <span class="order-form__title order-form__title--color">Цвет</span>
               <div class="order-form__wrapper order-form__wrapper--color">
@@ -247,18 +247,19 @@
 
           <div class="order-form__container">
             <section class="order-form__info">
+              <h2 class="visually-hidden">Личные данные</h2>
               <span class="order-form__title order-form__title--info">ФИО</span>
               <div class="order-form__wrapper order-form__wrapper--info">
                 <label class="order-form__label order-form__label--name" for="name">
                   Имя:
                   <br class="order-form--br">
-                  <input class="order-form__input order-form__input--text" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+                  <input class="order-form__input order-form__input--text order-form__input--name" type="text" id="name" name="name" placeholder="Введите ваше имя*">
                 </label>
                 <br>
                 <label class="order-form__label order-form__label--surname" for="surname">
                   Фамилия:
                   <br class="order-form--br">
-                  <input class="order-form__input order-form__input--text" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+                  <input class="order-form__input order-form__input--text order-form__input--surname" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
                 </label>
                 <br>
                 <label class="order-form__label" for="patronym">
@@ -271,11 +272,12 @@
           </div>
 
           <section class="order-form__tel">
+            <h2 class="visually-hidden">Контактные данные</h2>
             <div class="order-form__container">
               <span class="order-form__title order-form__title--tel">тел</span>
                 <label class="order-form__label" for="tel">
                   <span class="visually-hidden">Номер телефона</span>
-                  <input class="order-form__input order-form__input--tel" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                  <input class="order-form__input order-form__input--tel" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
                   <svg class="order-form__phone" width="24.829px" height="24.333px">
                     <use xlink:href="#form-phone"></use>
                   </svg>
@@ -284,11 +286,12 @@
           </section>
 
           <section class="order-form__email">
+            <h2 class="visually-hidden">Контактные данные</h2>
             <div class="order-form__container">
               <span class="order-form__title order-form__title--email">E-mail</span>
                 <label class="order-form__label order-form__label--mail" for="email">
                   <span class="visually-hidden">E-mail</span>
-                  <input class="order-form__input order-form__input--email" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+                  <input class="order-form__input order-form__input--email" type="email" id="email" name="email" placeholder="Ваш Email*">
                   <svg class="order-form__mail-icon" width="32px" height="32px">
                     <use xlink:href="#form-mail"></use>
                   </svg>
@@ -298,6 +301,7 @@
 
           <div class="order-form__container">
             <section class="order-form__message">
+              <h2 class="visually-hidden">Текстовое сообщение</h2>
               <span class="order-form__title order-form__title--message">Доп</span>
               <textarea class="order-form__input order-form__input--message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </section>
@@ -314,9 +318,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__logo">
-          <img src="img/icons/logo-footer.svg">
-        </div>
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/icons/logo-footer.svg" alt="Логотип Мишка">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">

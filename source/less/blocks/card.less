@@ -10,6 +10,14 @@
     width: 316px;
     display: initial;
   }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .card__img {
@@ -107,7 +115,25 @@
   font-size: 13px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 1px;
+    margin-left: 1px;
     font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 2px;
+  }
+
+  &--cart {
+    @media (min-width: @tablet-width) {
+      margin-top: 4px;
+      margin-left: 1px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 3px;
+      margin-left: -1px;
+    }
   }
 }
 

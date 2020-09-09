@@ -15,6 +15,10 @@
   padding-top: 26px;
   padding-bottom: 29px;
   position: relative;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: ease-in 0.2s;
+  cursor: pointer;
 
   &--left {
     background-color: @basic-mint-light;
@@ -31,17 +35,20 @@
 
   @media (min-width: @tablet-width) {
     width: 50%;
+    min-height: 115px;
     padding-left: 35px;
+  }
+
+  &:hover,
+  &:active {
+    min-height: 120px;
+    transform: translateY(-5px);
   }
 }
 
 .features__title {
-  margin: 0;
   max-width: 138px;
-  line-height: 22px;
-}
-
-.features__link {
+  display: inline-block;
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 19px;
@@ -73,5 +80,10 @@
     top: 50%;
     right: 28px;
     transform: translateY(-50%);
+
+    @media (min-width: @desktop-width) {
+      top: 54%;
+      right: 35px;
+    }
   }
 }

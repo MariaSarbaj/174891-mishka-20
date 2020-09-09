@@ -30,12 +30,14 @@
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 2px;
     margin-bottom: 80px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 17px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 4px;
@@ -207,6 +209,7 @@
   border: none;
   box-shadow: inset 0 -2px 0 @basic-black;
   font-family: "OpenSans", "Arial", sans-serif;
+  transition: all 0.3s;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -670,4 +673,11 @@
 .order-form__input--email:active + .order-form__mail-icon {
   fill: @basic-mint-light;
   opacity: 1;
+}
+
+.order-form__input--error {
+  transform: scale(1.05);
+  border: 2px solid transparent;
+  background-color: #f6dada;
+  color: rgba(0, 0, 0, 0.4);
 }

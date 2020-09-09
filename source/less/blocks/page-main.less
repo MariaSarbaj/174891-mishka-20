@@ -14,6 +14,7 @@
 
 .page-main__img {
   height: 489px;
+  background-color: #f9f9f9;
   background-image: url("../img/bg/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -16px;
@@ -29,16 +30,18 @@
     position: relative;
     background-image: url("../img/bg/hero-tablet@1x.jpg");
     padding-top: 155px;
+    background-size: auto 758px;
 
     &::after {
       content: "";
       height: 24px;
       width: 100%;
       position: absolute;
-      bottom: 16px;
+      bottom: 2px;
       background-image: url("../img/icons/bg-zigzag-fill.svg");
-      background-position: center top;
+      background-position: 36px top;
       background-repeat: repeat-x;
+      background-size: 776px 24px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -48,14 +51,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 763px;
+    height: 747px;
     background-image: url("../img/bg/hero-desktop@1x.jpg");
+    background-size: auto 763px;
     padding-top: 158px;
     z-index: -1;
 
     &::after {
       height: 34px;
-      bottom: 16px;
+      bottom: -13px;
+      background-position: -16px top;
+      background-size: 1250px 37px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -79,14 +85,14 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 50px;
-    padding-bottom: 371px;
+    padding-bottom: 372px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    padding-bottom: 354px;
+    padding-bottom: 353px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -103,6 +109,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 95px;
+    padding-bottom: 52px;
   }
 }
 
@@ -114,6 +121,8 @@
 
   @media (min-width: @tablet-width) {
     height: 17px;
+    background-size: 768px 17px;
+    background-position: 39px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -121,5 +130,7 @@
     margin-right: auto;
     width: 1050px;
     height: 23px;
+    background-size: 1050px 23px;
+    background-position: 50px 0;
   }
 }

@@ -1,6 +1,6 @@
 .production {
   margin-top: 15px;
-  margin-bottom: 58px;
+  margin-bottom: 61px;
   padding-bottom: 32px;
   width: 260px;
   border: 1px solid @shadow-grey;
@@ -32,7 +32,7 @@
   height: 32px;
   position: absolute;
   top: 28px;
-  left: 28px;
+  left: 33px;
   fill: @basic-mint-light;
 
   @media (min-width: @tablet-width) {
@@ -102,9 +102,18 @@
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: ease-in 0.2s;
 
   @media (min-width: @tablet-width) {
     top: 49%;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
   }
 }
 

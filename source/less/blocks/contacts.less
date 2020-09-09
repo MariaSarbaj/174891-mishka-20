@@ -96,6 +96,7 @@
 .contacts__mail {
   color: @basic-black;
   text-decoration: none;
+  position: relative;
 
   &:hover {
     color: @special-link-mint;
@@ -103,6 +104,28 @@
 
   &:active {
     color: @special-link-mint;
+  }
+
+  &::after {
+    content: "";
+    width: 179px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    background-color: @special-border-mint;
+
+    @media (min-width: @tablet-width) {
+      width: 204px;
+      left: 0;
+      bottom: -4px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 200px;
+      bottom: -10px;
+    }
   }
 }
 
