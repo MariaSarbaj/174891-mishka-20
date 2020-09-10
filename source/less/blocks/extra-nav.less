@@ -6,13 +6,19 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 113px;
+    top: 105px;
     left: 0;
     display: flex;
   }
 }
 
 .extra-nav__item {
+  &:not(:last-child) {
+    @media (min-width: @desktop-width) {
+      margin-right: 62px;
+    }
+  }
+
   a {
     font-weight: 700;
     line-height: 24px;

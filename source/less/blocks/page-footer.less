@@ -1,8 +1,12 @@
 .page-footer {
-  padding-top: 25px;
+  padding-top: 26px;
   padding-bottom: 23px;
   background-color: @special-grey-footer;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 50px;
+  }
 }
 
 .page-footer__wrapper {
@@ -23,5 +27,9 @@
 .page-footer__logo {
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 72px;
   }
 }

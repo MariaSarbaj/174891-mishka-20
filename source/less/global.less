@@ -9,6 +9,10 @@ body {
   color: @basic-black-light;
 }
 
+.body.lock {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -33,6 +37,7 @@ body {
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 36.5px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -68,10 +73,4 @@ body {
   @media (min-width: @tablet-width) {
     width: 292px;
   }
-}
-
-/* Temp */
-
-.popup-order {
-  display: none;
 }

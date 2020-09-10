@@ -13,40 +13,68 @@
 }
 
 .page-main__img {
-  padding-top: 90px;
+  height: 489px;
+  background-color: #f9f9f9;
   background-image: url("../img/bg/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-position: center -16px;
+  background-size: auto 373px;
+  box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/hero-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
+    height: 758px;
+    position: relative;
     background-image: url("../img/bg/hero-tablet@1x.jpg");
     padding-top: 155px;
+    background-size: auto 758px;
 
     &::after {
       content: "";
       height: 24px;
       width: 100%;
       position: absolute;
-      bottom: -467px;
+      bottom: 2px;
       background-image: url("../img/icons/bg-zigzag-fill.svg");
-      background-position: center top;
+      background-position: 36px top;
       background-repeat: repeat-x;
+      background-size: 776px 24px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/hero-tablet@2x.jpg");
+      background-size: cover;
     }
   }
 
   @media (min-width: @desktop-width) {
+    height: 747px;
     background-image: url("../img/bg/hero-desktop@1x.jpg");
+    background-size: auto 763px;
     padding-top: 158px;
+    z-index: -1;
 
     &::after {
       height: 34px;
+      bottom: -13px;
+      background-position: -16px top;
+      background-size: 1250px 37px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/hero-desktop@2x.jpg");
+      background-size: cover;
     }
   }
 }
 
 .page-main__title {
+  margin: 0;
   padding: 0 30px;
+  padding-top: 73px;
   padding-bottom: 120px;
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 700;
@@ -64,28 +92,45 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    padding-bottom: 355px;
+    padding-bottom: 353px;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .page-main__form {
-  padding-top: 17px;
+  padding-top: 4px;
   padding-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 95px;
+    padding-bottom: 52px;
+  }
 }
 
 .page-main__line {
-  height: 6px;
+  min-height: 7px;
   background-image: url("../img/icons/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-size: cover;
 
   @media (min-width: @tablet-width) {
     height: 17px;
+    background-size: 768px 17px;
+    background-position: 39px 0;
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1050px;
     height: 23px;
+    background-size: 1050px 23px;
+    background-position: 50px 0;
   }
 }

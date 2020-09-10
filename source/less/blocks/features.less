@@ -12,8 +12,13 @@
 
 .features__item {
   padding-left: 30px;
-  padding-top: 24px;
-  padding-bottom: 31px;
+  padding-top: 26px;
+  padding-bottom: 29px;
+  position: relative;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: ease-in 0.2s;
+  cursor: pointer;
 
   &--left {
     background-color: @basic-mint-light;
@@ -30,14 +35,20 @@
 
   @media (min-width: @tablet-width) {
     width: 50%;
+    min-height: 115px;
+    padding-left: 35px;
+  }
+
+  &:hover,
+  &:active {
+    min-height: 120px;
+    transform: translateY(-5px);
   }
 }
 
 .features__title {
-  margin: 0;
-}
-
-.features__link {
+  max-width: 138px;
+  display: inline-block;
   font-family: "OpenSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 19px;
@@ -48,5 +59,31 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.features__icon {
+  position: absolute;
+  fill: @special-mint-dark;
+
+  &--left {
+    width: 40.219px;
+    height: 62.411px;
+    top: 50%;
+    right: 36px;
+    transform: translateY(-48%);
+  }
+
+  &--right {
+    width: 60px;
+    height: 59.62px;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+
+    @media (min-width: @desktop-width) {
+      top: 54%;
+      right: 35px;
+    }
   }
 }
