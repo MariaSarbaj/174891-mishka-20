@@ -105,6 +105,14 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__desc-text {
@@ -165,12 +173,12 @@
 .card__cart {
   margin-top: -2px;
 
-  &:hover .user-list__cart--icon {
+  &:hover .card__icon {
     fill: @basic-mint-light;
     opacity: 1;
   }
 
-  &:active .user-list__cart--icon {
+  &:active .card__icon {
     fill: @basic-mint-light;
     opacity: 0.3;
   }

@@ -23,6 +23,11 @@
 
   &--left {
     background-color: @basic-mint-light;
+
+    &:hover,
+    &:active {
+      background-color: @features-light-hover;
+    }
   }
 
   &--right {
@@ -31,6 +36,11 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 0;
+    }
+
+    &:hover,
+    &:active {
+      background-color: @special-link-mint;
     }
   }
 
@@ -43,7 +53,7 @@
   &:hover,
   &:active {
     min-height: 120px;
-    transform: translateY(-5px);
+    margin-top: -5px;
   }
 }
 
@@ -66,6 +76,7 @@
 .features__icon {
   position: absolute;
   fill: @special-mint-dark;
+  opacity: 0.5;
 
   &--left {
     width: 40.219px;
@@ -87,4 +98,12 @@
       right: 35px;
     }
   }
+}
+
+.features__item:hover + .features__icon {
+  opacity: 1;
+}
+
+.features__item:active + .features__icon {
+  opacity: 0.3;
 }

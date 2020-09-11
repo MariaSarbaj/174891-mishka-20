@@ -70,8 +70,17 @@
   }
 }
 
-.main-nav--nojs {
-  @media (max-width: @mobile-width-only) {
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs {
     position: relative;
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .site-list__item,
+    .user-list__item {
+      display: block;
+    }
   }
 }

@@ -370,6 +370,7 @@
   }
 
   &--message:focus {
+    outline: none;
     border: 2px solid @special-border-mint;
     box-shadow: none;
   }
@@ -680,6 +681,11 @@
   @media (min-width: @tablet-width) {
     padding-top: 34px;
   }
+}
+
+.order-form__input:focus + .order-form__input-radio,
+.order-form__input:focus + .order-form__input-checkbox {
+  box-shadow: inset 0 -2px 0 @special-border-mint;
 }
 
 .order-form__input--tel:hover + .order-form__phone,
