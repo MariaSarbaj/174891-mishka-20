@@ -22,6 +22,10 @@
     width: 1050px;
     padding: 0;
   }
+
+  &--relative {
+    position: relative;
+  }
 }
 
 .order-form__desc {
@@ -467,7 +471,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 224px;
+    right: 174px;
     bottom: 10px;
   }
 }
@@ -485,6 +489,10 @@
   @media (min-width: @desktop-width) {
     margin-top: 48px;
     margin-left: 176px;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
